@@ -1,7 +1,6 @@
 # PySician
 
 Submission for FHIR @hacks 2021.
-<<<<<<< Updated upstream
 
 =======
 
@@ -48,4 +47,3 @@ photos of (for example) skin conditions -- optional
 
 --> uploading photos storage (safe condition)
 
-> > > > > > > Stashed changes
