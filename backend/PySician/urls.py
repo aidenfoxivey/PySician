@@ -16,8 +16,13 @@ Including another URLconf
 from patientlog.models import Patient
 from django.contrib import admin
 from django.urls import path, include
+from .views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("patientlog.urls"), name="patientlog"),
+    # include implies more than one different endpoint
+    path('checkserver/', index, name='index'),
+    path('auth/', include('authapp.urls'))
+    # same for here -- more than one different end point
 ]

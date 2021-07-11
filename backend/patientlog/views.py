@@ -1,7 +1,6 @@
-from django.shortcuts import render
 from rest_framework import generics
-from .models import Patient,Doctor
-from .serializers import PatientSerializer,DoctorSerializer
+from .models import Patient,Doctor,Appt
+from .serializers import PatientSerializer,DoctorSerializer,ApptSerializer
 from django.http import HttpResponse
 import datetime
 # generic views -- core of CRUD apps
@@ -30,3 +29,11 @@ class DoctorList(generics.ListCreateAPIView):
 class DoctorDetail(generics.RetrieveUpdateDestroyAPIView):
 	queryset = Doctor.objects.all()
 	serializer_class = DoctorSerializer
+
+class ApptList(generics.ListCreateAPIView):
+	queryset = Appt.objects.all()
+	serializer_class = ApptSerializer
+
+class ApptDetail(generics.RetrieveUpdateDestroyAPIView):
+	queryset = Appt.objects.all()
+	serializer_class = ApptSerializer
